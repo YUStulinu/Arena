@@ -1,0 +1,12 @@
+engine/build/
+engine/build_log.txt
+web/node_modules/
+web/dist/
+server/target/
+matchmaker/_build/
+matchmaker/deps/
+bots/.venv/
+.venv/
+run/
+__pycache__/
+*.pyc

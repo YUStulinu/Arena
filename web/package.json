@@ -1,0 +1,16 @@
+{
+  "name": "arena-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Arena in the browser: the engine in Wasm, rollback over WebSocket, Canvas rendering",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "tsc -p tsconfig.json && node --test \"dist/test/*.test.js\"",
+    "serve": "python -m http.server 8090"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "typescript": "5.9.3"
+  }
+}
