@@ -32,7 +32,7 @@ Scores are points per match (win 1, draw 0.5) of the row against the column.
 
 ## Online ladder (matchmaker, Glicko-2)
 
-23 online matches in 12.0 minutes between bots that keep joining the queue: 0 desyncs in 2194 compared checksums, 0 forfeits; a client sends 1047 and receives 653 bytes/s.
+23 online matches in 12.0 minutes between bots that keep joining the queue: 0 desyncs in 2194 compared checksums, 0 forfeits; a client sends 1044 and receives 651 bytes/s.
 
 | player | rating | deviation | games | wins | draws |
 |---|---|---|---|---|---|

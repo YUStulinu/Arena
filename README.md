@@ -68,7 +68,9 @@ Values are points per match against the column (a draw counts 0.5). Every bot be
 
 ### The whole system
 
-A browser and a Python bot met through the matchmaker and played over WebSocket and UDP with rollback. The result reached the Glicko-2 ladder. `eval/ladder.py` runs the same thing with bots only.
+A browser and a Python bot met through the matchmaker and played over WebSocket and UDP with rollback. The result reached the Glicko-2 ladder. `eval/ladder.py` runs the same thing with bots only: in 12 minutes, 23 online matches, 0 desyncs in 2194 checksums, 0 forfeits, and a Glicko-2 order of ppo_final 1936, ppo_010M 1653, chase 1577, random 1014 (deviations 156–209, so few games that only the gap to random is certain).
+
+Not solved: in long ladder runs on Windows, some of the bots' HTTP polls to the matchmaker ended with "connection closed without response" (5 in one run, 96 in another, none in a later 3-minute run). The bots retry, so no match was lost, but each error costs a queue round and is why there are so few matches. A deeper accept queue and a cleaner socket handoff did not clearly fix it, and I could not reproduce it in a direct stress test, so the cause is unknown.
 
 ## Building and running
 

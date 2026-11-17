@@ -35,8 +35,9 @@ def main():
     server = subprocess.Popen([os.path.join(ROOT, "server", "target", "release", "arena-server" + EXE), "--script",
                                os.path.join(ROOT, "engine", "scripts", "arena.lua"), "--report", "127.0.0.1:7703"],
                               stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True)
+    mm_log = open(os.path.join(ROOT, "run", "ladder_mm.log"), "w")
     mm = subprocess.Popen("mix run --no-halt", cwd=os.path.join(ROOT, "matchmaker"), env=env, shell=True, stdin=subprocess.PIPE,
-                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                          stdout=mm_log, stderr=subprocess.STDOUT)
     for _ in range(120):
         try:
             urllib.request.urlopen("http://127.0.0.1:8080/api/leaderboard", timeout=1)
