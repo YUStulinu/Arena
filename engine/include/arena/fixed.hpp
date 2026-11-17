@@ -3,6 +3,7 @@
 // No floating point anywhere in the engine.
 #pragma once
 
+#include <cstddef>
 #include <cstdint>
 
 namespace arena {
@@ -25,9 +26,9 @@ inline fx fx_cos(int32_t angle) { return fx_sin(angle + ANGLE_STEPS / 4); }
 inline fx fx_len(fx x, fx y) { return fx_sqrt(fx((int64_t(x) * x + int64_t(y) * y) >> 16)); }
 
 /// 64-bit FNV-1a, for state checksums
-inline uint64_t fnv1a(const void* data, size_t n, uint64_t h = 1469598103934665603ull) {
+inline uint64_t fnv1a(const void* data, std::size_t n, uint64_t h = 1469598103934665603ull) {
     const auto* p = static_cast<const uint8_t*>(data);
-    for (size_t i = 0; i < n; ++i) {
+    for (std::size_t i = 0; i < n; ++i) {
         h ^= p[i];
         h *= 1099511628211ull;
     }
