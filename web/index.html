@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arena</title>
+<style>
+  :root { --bg: #0b0d10; --panel: #15181d; --ink: #e6e8eb; --muted: #9aa3ae; --line: #2a2f37; --accent: #3b82f6; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; display: grid; grid-template-columns: 280px 1fr; background: var(--bg); color: var(--ink);
+         font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  aside { background: var(--panel); border-right: 1px solid var(--line); padding: 16px; }
+  h1 { margin: 0 0 4px; font-size: 22px; }
+  p { color: var(--muted); margin: 0 0 14px; }
+  input, button { font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 7px 10px; width: 100%; margin-bottom: 8px; }
+  button { cursor: pointer; }
+  button.primary { background: var(--accent); border-color: var(--accent); color: white; }
+  h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 20px 0 6px; }
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  td { padding: 3px 4px; border-top: 1px solid var(--line); }
+  td:nth-child(n+2) { text-align: right; color: var(--muted); }
+  #status { min-height: 1.4em; color: var(--ink); }
+  main { min-width: 0; }
+  canvas { width: 100%; height: 100vh; display: block; }
+  kbd { border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; font-size: 12px; }
+  @media (max-width: 760px) { body { grid-template-columns: 1fr; } canvas { height: 70vh; } main { order: -1; } }
+</style>
+</head>
+<body>
+<aside>
+  <h1>Arena</h1>
+  <p>Push the other drone off the shrinking platform. First to three rounds.</p>
+  <input id="name" placeholder="your name" maxlength="24" aria-label="Name">
+  <button id="play" class="primary">Find a match</button>
+  <button id="practice">Practice against a bot</button>
+  <div id="status">loading…</div>
+  <h2>Keys</h2>
+  <p><kbd>W A S D</kbd> or arrows: move · <kbd>Space</kbd>: dash · <kbd>J</kbd> / <kbd>Shift</kbd>: pulse</p>
+  <h2>Leaderboard (Glicko-2)</h2>
+  <table><tbody id="board"></tbody></table>
+</aside>
+<main><canvas id="view"></canvas></main>
+<script type="module" src="dist/src/main.js"></script>
+</body>
+</html>

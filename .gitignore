@@ -10,3 +10,4 @@ bots/.venv/
 run/
 __pycache__/
 *.pyc
+web/public/arena.lua

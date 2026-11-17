@@ -17,3 +17,4 @@ LUA=$(ls ../third_party/lua/src/*.c | grep -v -E '/(lua|luac|loslib|liolib|loadl
   -L"$S/lib/wasm32-wasip1/eh" -lc++ -lc++abi -lunwind -lwasi-emulated-signal -lwasi-emulated-process-clocks \
   -o "$OUT"
 ls -la "$OUT"
+cp scripts/arena.lua ../web/public/arena.lua  # served next to the engine
