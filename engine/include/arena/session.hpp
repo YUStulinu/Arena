@@ -27,6 +27,8 @@ struct SessionStats {
     int64_t mispredicted = 0;     // remote inputs that differed from the prediction
     int64_t predicted = 0;        // remote inputs that had to be predicted
     int64_t stalls = 0;           // advance() refused: too far ahead of the remote player
+    int64_t error_sum = 0;        // at each rollback: how far the players were from where they
+    int32_t error_max = 0;        // should have been (fixed point, summed over both players)
 };
 
 class Session {

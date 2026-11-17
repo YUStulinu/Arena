@@ -82,6 +82,7 @@ bool Session::advance() {
         int from = rollback_from_;
         rollback_from_ = -1;
         if (frame_ - from > int(ring_.size()) - 1) throw std::logic_error("rollback beyond the saved states");
+        const State shown = state_;  // what the player was seeing
         state_ = ring_[size_t(from) % ring_.size()];
         ++stats_.rollbacks;
         stats_.max_rollback = std::max(stats_.max_rollback, frame_ - from);
@@ -89,6 +90,10 @@ bool Session::advance() {
             simulate(f);
             ++stats_.resimulated;
         }
+        fx err = 0;
+        for (int i = 0; i < PLAYERS; ++i) err += fx_len(state_.p[i].x - shown.p[i].x, state_.p[i].y - shown.p[i].y);
+        stats_.error_sum += err;
+        stats_.error_max = std::max(stats_.error_max, err);
     }
     simulate(frame_);
     ++frame_;

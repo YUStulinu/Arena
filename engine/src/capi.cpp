@@ -103,6 +103,8 @@ void arena_session_stats(const ArenaSession* s, int64_t* o) {
     o[4] = t.mispredicted;
     o[5] = t.predicted;
     o[6] = t.stalls;
+    o[7] = t.error_sum;
+    o[8] = t.error_max;
 }
 int32_t arena_session_checksums(ArenaSession* s, int32_t* frames, uint64_t* hashes, int32_t max) {
     auto c = s->session.take_checksums();

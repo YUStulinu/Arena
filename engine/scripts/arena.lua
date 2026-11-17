@@ -11,8 +11,8 @@ local MIN_RADIUS = fx.milli(3500)
 local SHRINK_TICKS = 40 * 60      -- from START to MIN over 40 s
 local ROUND_TICKS = 60 * 60       -- a round ends in a draw after 60 s
 local ROUNDS_TO_WIN = 3
-local ACCEL = fx.milli(9)         -- units per tick^2 while steering
-local DASH_IMPULSE = fx.milli(320)
+local ACCEL = fx.milli(10)        -- units per tick^2 while steering (top speed ACCEL / (1 - friction))
+local DASH_IMPULSE = fx.milli(300)
 local DASH_COOLDOWN = 50
 local PULSE_RANGE = fx.milli(2600)
 local PULSE_IMPULSE = fx.milli(380)
@@ -23,7 +23,7 @@ local DASH_CD, PULSE_CD, FACING, PULSE_FLASH, FALLEN = 0, 1, 2, 3, 4
 -- globals
 local ROUND_START, ROUND, PAUSE = 0, 1, 2
 
-w.set_param("friction", fx.milli(965))
+w.set_param("friction", fx.milli(920))
 w.set_param("restitution", fx.milli(800))
 w.set_param("max_speed", fx.milli(450))
 

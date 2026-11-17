@@ -129,12 +129,13 @@ struct LuaApi {
     static int set_param(lua_State* L) {
         // the parameters are not part of the State: only the loading script may set them
         if (game(L)->cur_) return luaL_error(L, "w.set_param is allowed only while the script loads");
-        std::string k = luaL_checkstring(L, 1);
+        // no objects with destructors here: Lua errors longjmp over this frame
+        const char* k = luaL_checkstring(L, 1);
         fx v = num(L, 2);
         Physics& ph = game(L)->phys_;
-        if (k == "friction") ph.friction = v;
-        else if (k == "restitution") ph.restitution = v;
-        else if (k == "max_speed") ph.max_speed = v;
+        if (!std::strcmp(k, "friction")) ph.friction = v;
+        else if (!std::strcmp(k, "restitution")) ph.restitution = v;
+        else if (!std::strcmp(k, "max_speed")) ph.max_speed = v;
         else luaL_argerror(L, 1, "unknown parameter");
         return 0;
     }

@@ -163,6 +163,7 @@ export class Game {
 
 export interface Stats {
   frames: number; rollbacks: number; resimulated: number; maxRollback: number; mispredicted: number; predicted: number; stalls: number;
+  errorSum: number; errorMax: number; // units: how far the drones jumped at rollbacks
 }
 
 /** The rollback session (engine/include/arena/session.hpp) seen from JS. */
@@ -198,11 +199,14 @@ export class Session {
     return this.engine.observe(this.x.arena_session_state(this.handle));
   }
   stats(): Stats {
-    const p = this.x.arena_alloc(7 * 8);
+    const p = this.x.arena_alloc(9 * 8);
     this.x.arena_session_stats(this.handle, p);
-    const v = Array.from(new BigInt64Array(this.x.memory.buffer, p, 7), Number);
+    const v = Array.from(new BigInt64Array(this.x.memory.buffer, p, 9), Number);
     this.x.arena_free(p);
-    return { frames: v[0], rollbacks: v[1], resimulated: v[2], maxRollback: v[3], mispredicted: v[4], predicted: v[5], stalls: v[6] };
+    return {
+      frames: v[0], rollbacks: v[1], resimulated: v[2], maxRollback: v[3], mispredicted: v[4], predicted: v[5], stalls: v[6],
+      errorSum: v[7] / 65536, errorMax: v[8] / 65536,
+    };
   }
   /** Newly confirmed (frame, hash) checksums. */
   checksums(): [number, string][] {

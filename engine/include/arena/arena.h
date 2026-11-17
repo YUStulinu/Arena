@@ -50,8 +50,8 @@ ARENA_API(arena_session_remote_known) int32_t arena_session_remote_known(const A
 ARENA_API(arena_session_local_known) int32_t arena_session_local_known(const ArenaSession* s);
 ARENA_API(arena_session_local_input) uint8_t arena_session_local_input(const ArenaSession* s, int32_t frame);
 ARENA_API(arena_session_state) const void* arena_session_state(const ArenaSession* s);
-/* frames, rollbacks, resimulated, max rollback, mispredicted, predicted, stalls */
-ARENA_API(arena_session_stats) void arena_session_stats(const ArenaSession* s, int64_t* out7);
+/* frames, rollbacks, resimulated, max rollback, mispredicted, predicted, stalls, position error sum, max (fixed point) */
+ARENA_API(arena_session_stats) void arena_session_stats(const ArenaSession* s, int64_t* out9);
 /* up to max (frame, hash) pairs of newly confirmed checksums; returns the count */
 ARENA_API(arena_session_checksums) int32_t arena_session_checksums(ArenaSession* s, int32_t* frames, uint64_t* hashes, int32_t max);
 

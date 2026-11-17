@@ -1,0 +1,11 @@
+[package]
+name = "arena-server"
+version = "0.1.0"
+edition = "2021"
+description = "Arena's match server: relays inputs over UDP (native clients) and WebSocket (browsers), checks the game with the engine, reports results"
+license = "MIT"
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
