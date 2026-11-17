@@ -147,7 +147,8 @@ export class Game {
   }
 
   hash(state: number): string {
-    return this.engine.exports.arena_hash(state).toString(16).padStart(16, "0");
+    // a Wasm i64 arrives signed: read it as the unsigned 64-bit hash it is
+    return BigInt.asUintN(64, this.engine.exports.arena_hash(state)).toString(16).padStart(16, "0");
   }
 
   free(state: number) {
