@@ -1,0 +1,9 @@
+{
+  "cmake.sourceDirectory": "${workspaceFolder}/engine",
+  "cmake.buildDirectory": "${workspaceFolder}/engine/build/native",
+  "rust-analyzer.linkedProjects": ["server/Cargo.toml"],
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": ["bots/tests"],
+  "search.exclude": { "third_party": true, "run": true, ".venv": true, "**/node_modules": true }
+}

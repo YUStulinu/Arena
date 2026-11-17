@@ -8,9 +8,9 @@ The server and two native bot clients (chase against random) in three Linux netw
 
 | scenario | matches | desyncs (checksums compared) | rollbacks / min | mean / max depth (frames) | mispredicted | mean / max error at a rollback (units) | stalls / min | upload / download (bytes/s) |
 |---|---|---|---|---|---|---|---|---|
-| lan | 4 | 0 (186) | 0 | 0.0 / 0 | 0% of 0 predicted | 0.000 / 0.000 | 0 | 1092 / 696 |
-| 20ms | 4 | 0 (188) | 197 | 8.7 / 12 | 12% of 3213 predicted | 0.375 / 3.576 | 466 | 1233 / 829 |
-| 50ms_1pct | 4 | 0 (184) | 186 | 10.3 / 12 | 13% of 3317 predicted | 0.428 / 3.506 | 1416 | 1454 / 1021 |
-| 100ms_3pct | 4 | 0 (152) | 287 | 9.6 / 12 | 17% of 4991 predicted | 0.441 / 4.766 | 830 | 1787 / 1273 |
-| 150ms_5pct | 4 | 0 (140) | 212 | 9.7 / 12 | 26% of 4520 predicted | 0.467 / 3.917 | 2784 | 1927 / 1327 |
+| lan | 4 | 0 (186) | 0 | 0.0 / 0 | 0% of 0 predicted | 0.000 / 0.000 | 0 | 1087 / 693 |
+| 20ms | 4 | 0 (182) | 235 | 1.2 / 3 | 9% of 4307 predicted | 0.040 / 0.621 | 0 | 1230 / 827 |
+| 50ms_1pct | 4 | 0 (191) | 316 | 4.4 / 8 | 13% of 5959 predicted | 0.169 / 2.482 | 0 | 1451 / 1020 |
+| 100ms_3pct | 4 | 0 (153) | 279 | 9.8 / 12 | 16% of 5020 predicted | 0.495 / 3.662 | 299 | 1788 / 1274 |
+| 150ms_5pct | 4 | 0 (139) | 60 | 9.5 / 12 | 26% of 4621 predicted | 0.522 / 4.590 | 3453 | 2099 / 389 |
 

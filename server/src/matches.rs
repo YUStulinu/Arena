@@ -50,6 +50,7 @@ pub struct Match {
     bytes_in: [u64; 2],
     bytes_out: [u64; 2],
     done: bool,
+    result_msg: Option<Vec<u8>>, // RESULT, kept to resend
 }
 
 pub struct Server {
@@ -90,6 +91,7 @@ impl Server {
                 bytes_in: [0, 0],
                 bytes_out: [0, 0],
                 done: false,
+                result_msg: None,
             },
         );
         Ok(())
@@ -138,7 +140,10 @@ impl Server {
                     return; // not this peer's seat
                 }
                 let Some(m) = self.matches.get_mut(&match_id) else { return };
-                if m.done {
+                if let Some(r) = m.result_msg.clone() {
+                    // the result was lost on the way: send it again to whoever still plays
+                    m.last_seen[p] = now;
+                    self.send(match_id, p, r);
                     return;
                 }
                 m.last_seen[p] = now;
@@ -214,6 +219,7 @@ impl Server {
             seconds: m.started.map_or(0.0, |s| (now - s).as_secs_f64()),
         };
         let desyncs = m.desyncs;
+        m.result_msg = Some(proto::result(winner, desyncs));
         for p in 0..2 {
             self.send(id, p, proto::result(winner, desyncs));
         }
@@ -307,6 +313,20 @@ mod tests {
         s.tick(now + SILENCE_FORFEIT + Duration::from_secs(1));
         assert_eq!(s.results.len(), 1);
         assert!(s.results[0].forfeit);
+    }
+
+    #[test]
+    fn a_lost_result_is_sent_again() {
+        let now = Instant::now();
+        let mut s = Server::new(script()).unwrap();
+        s.create_match(3, [1, 2], 2, now).unwrap();
+        let (a, b) = (Peer::Ws(1), Peer::Ws(2));
+        s.handle(a, &proto::encode_client(&ClientMsg::Hello { match_id: 3, player: 0, token: 1 }), now);
+        s.handle(b, &proto::encode_client(&ClientMsg::Hello { match_id: 3, player: 1, token: 2 }), now);
+        s.tick(now + SILENCE_FORFEIT + Duration::from_secs(1)); // both silent: the match ends
+        s.outbox.clear();
+        s.handle(a, &input(3, 0, 0, 0, vec![1], vec![]), now + SILENCE_FORFEIT + Duration::from_secs(2));
+        assert!(s.outbox.iter().any(|(p, d)| *p == a && d[0] == proto::RESULT));
     }
 
     #[test]
