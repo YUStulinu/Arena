@@ -1,0 +1,72 @@
+{
+ "matches_per_pair": 40,
+ "total_matches": 840,
+ "draws": 42,
+ "elo": {
+  "random": 1000.0,
+  "chase": 3136.1,
+  "ppo_002M": 2494.6,
+  "ppo_006M": 2762.8,
+  "ppo_010M": 2873.1,
+  "ppo_020M": 3356.7,
+  "ppo_final": 3452.1
+ },
+ "score_matrix": {
+  "random": {
+   "chase": 0.0,
+   "ppo_002M": 0.0,
+   "ppo_006M": 0.0,
+   "ppo_010M": 0.0,
+   "ppo_020M": 0.0,
+   "ppo_final": 0.0
+  },
+  "chase": {
+   "random": 1.0,
+   "ppo_002M": 0.9,
+   "ppo_006M": 0.85,
+   "ppo_010M": 0.825,
+   "ppo_020M": 0.25,
+   "ppo_final": 0.225
+  },
+  "ppo_002M": {
+   "random": 1.0,
+   "chase": 0.1,
+   "ppo_006M": 0.175,
+   "ppo_010M": 0.037,
+   "ppo_020M": 0.0,
+   "ppo_final": 0.0
+  },
+  "ppo_006M": {
+   "random": 1.0,
+   "chase": 0.15,
+   "ppo_002M": 0.825,
+   "ppo_010M": 0.35,
+   "ppo_020M": 0.0,
+   "ppo_final": 0.0
+  },
+  "ppo_010M": {
+   "random": 1.0,
+   "chase": 0.175,
+   "ppo_002M": 0.963,
+   "ppo_006M": 0.65,
+   "ppo_020M": 0.0,
+   "ppo_final": 0.037
+  },
+  "ppo_020M": {
+   "random": 1.0,
+   "chase": 0.75,
+   "ppo_002M": 1.0,
+   "ppo_006M": 1.0,
+   "ppo_010M": 1.0,
+   "ppo_final": 0.3
+  },
+  "ppo_final": {
+   "random": 1.0,
+   "chase": 0.775,
+   "ppo_002M": 1.0,
+   "ppo_006M": 1.0,
+   "ppo_010M": 0.963,
+   "ppo_020M": 0.7
+  }
+ }
+}

@@ -26,6 +26,14 @@ defmodule ArenaMm.Application do
         []
       end
 
+    # for scripts: stop when stdin closes (on Windows, killing `mix` leaves the VM running)
+    if System.get_env("ARENA_EXIT_ON_EOF") == "1" do
+      spawn(fn ->
+        IO.read(:stdio, :eof)
+        System.halt(0)
+      end)
+    end
+
     Supervisor.start_link(children, strategy: :one_for_one, name: ArenaMm.Supervisor)
   end
 end

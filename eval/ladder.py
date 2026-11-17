@@ -29,13 +29,13 @@ def main():
     from arena_bots.net_client import queue_and_play
     from arena_bots.policies import ChaseBot, NetBot, RandomBot
 
-    env = {**os.environ, "ARENA_LADDER": os.path.join(ROOT, "run", "ladder.bin"), "ARENA_HTTP_PORT": "8080"}
+    env = {**os.environ, "ARENA_LADDER": os.path.join(ROOT, "run", "ladder.bin"), "ARENA_HTTP_PORT": "8080", "ARENA_EXIT_ON_EOF": "1"}
     if os.path.exists(env["ARENA_LADDER"]):
         os.remove(env["ARENA_LADDER"])
     server = subprocess.Popen([os.path.join(ROOT, "server", "target", "release", "arena-server" + EXE), "--script",
                                os.path.join(ROOT, "engine", "scripts", "arena.lua"), "--report", "127.0.0.1:7703"],
                               stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True)
-    mm = subprocess.Popen("mix run --no-halt", cwd=os.path.join(ROOT, "matchmaker"), env=env, shell=True,
+    mm = subprocess.Popen("mix run --no-halt", cwd=os.path.join(ROOT, "matchmaker"), env=env, shell=True, stdin=subprocess.PIPE,
                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     for _ in range(120):
         try:
@@ -67,8 +67,8 @@ def main():
         t.join(timeout=a.minutes * 60 + 400)
     time.sleep(2)
     board = json.load(urllib.request.urlopen("http://127.0.0.1:8080/api/leaderboard"))
-    mm.terminate()
-    subprocess.run("taskkill /F /T /PID %d" % mm.pid, shell=True, capture_output=True) if os.name == "nt" else None
+    mm.stdin.close()  # the matchmaker stops itself (ARENA_EXIT_ON_EOF)
+    mm.wait(timeout=30)
     server.terminate()
     out, _ = server.communicate(timeout=10)
     results = [json.loads(l) for l in out.splitlines() if l.startswith("{")]

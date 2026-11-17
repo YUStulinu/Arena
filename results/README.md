@@ -8,9 +8,36 @@ The server and two native bot clients (chase against random) in three Linux netw
 
 | scenario | matches | desyncs (checksums compared) | rollbacks / min | mean / max depth (frames) | mispredicted | mean / max error at a rollback (units) | stalls / min | upload / download (bytes/s) |
 |---|---|---|---|---|---|---|---|---|
-| lan | 4 | 0 (186) | 0 | 0.0 / 0 | 0% of 0 predicted | 0.000 / 0.000 | 0 | 1087 / 693 |
-| 20ms | 4 | 0 (182) | 235 | 1.2 / 3 | 9% of 4307 predicted | 0.040 / 0.621 | 0 | 1230 / 827 |
-| 50ms_1pct | 4 | 0 (191) | 316 | 4.4 / 8 | 13% of 5959 predicted | 0.169 / 2.482 | 0 | 1451 / 1020 |
-| 100ms_3pct | 4 | 0 (153) | 279 | 9.8 / 12 | 16% of 5020 predicted | 0.495 / 3.662 | 299 | 1788 / 1274 |
-| 150ms_5pct | 4 | 0 (139) | 60 | 9.5 / 12 | 26% of 4621 predicted | 0.522 / 4.590 | 3453 | 2099 / 389 |
+| lan | 4 | 0 (186) | 0 | 0.0 / 0 | 0% of 0 predicted | 0.000 / 0.000 | 0 | 1085 / 693 |
+| 20ms | 4 | 0 (164) | 214 | 1.4 / 3 | 10% of 3394 predicted | 0.054 / 0.909 | 0 | 1225 / 823 |
+| 50ms_1pct | 4 | 0 (158) | 320 | 4.5 / 7 | 13% of 4952 predicted | 0.193 / 1.995 | 0 | 1448 / 1018 |
+| 100ms_3pct | 4 | 0 (152) | 278 | 9.6 / 12 | 15% of 4942 predicted | 0.448 / 3.613 | 233 | 1783 / 1270 |
+| 150ms_5pct | 4 | 0 (143) | 200 | 9.6 / 12 | 26% of 4670 predicted | 0.512 / 3.451 | 2808 | 1920 / 1343 |
+
+## Bot strength
+
+Round robin, 40 matches per pair (half in each seat), 840 matches, 42 draws (no winner after 4 minutes). Elo by maximum likelihood (Bradley-Terry), random = 1000.
+
+| bot | Elo | vs random | vs chase | vs ppo_002M | vs ppo_006M | vs ppo_010M | vs ppo_020M | vs ppo_final |
+|---|---|---|---|---|---|---|---|---|
+| ppo_final | 3452 | 1.00 | 0.78 | 1.00 | 1.00 | 0.96 | 0.70 | — |
+| ppo_020M | 3357 | 1.00 | 0.75 | 1.00 | 1.00 | 1.00 | — | 0.30 |
+| chase | 3136 | 1.00 | — | 0.90 | 0.85 | 0.82 | 0.25 | 0.23 |
+| ppo_010M | 2873 | 1.00 | 0.17 | 0.96 | 0.65 | — | 0.00 | 0.04 |
+| ppo_006M | 2763 | 1.00 | 0.15 | 0.82 | — | 0.35 | 0.00 | 0.00 |
+| ppo_002M | 2495 | 1.00 | 0.10 | — | 0.17 | 0.04 | 0.00 | 0.00 |
+| random | 1000 | — | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+
+Scores are points per match (win 1, draw 0.5) of the row against the column.
+
+## Online ladder (matchmaker, Glicko-2)
+
+23 online matches in 12.0 minutes between bots that keep joining the queue: 0 desyncs in 2194 compared checksums, 0 forfeits; a client sends 1047 and receives 653 bytes/s.
+
+| player | rating | deviation | games | wins | draws |
+|---|---|---|---|---|---|
+| ppo_final | 1936 | 209 | 7 | 7 | 0 |
+| ppo_010M | 1653 | 162 | 10 | 9 | 0 |
+| chase | 1577 | 165 | 10 | 7 | 0 |
+| random | 1014 | 156 | 19 | 0 | 0 |
 

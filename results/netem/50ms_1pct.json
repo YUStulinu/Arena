@@ -2,7 +2,7 @@
  "scenario": "50ms_1pct",
  "matches": [
   {
-   "match": 1517955075,
+   "match": 1874886342,
    "bots": [
     "chase",
     "random"
@@ -13,62 +13,62 @@
      "bot": "chase",
      "winner": 0,
      "desyncs": 0,
-     "seconds": 13.06,
-     "frames": 781,
-     "rollbacks": 72,
-     "resimulated": 411,
-     "max_rollback": 8,
-     "mispredicted": 105,
-     "predicted": 779,
+     "seconds": 13.47,
+     "frames": 806,
+     "rollbacks": 71,
+     "resimulated": 313,
+     "max_rollback": 7,
+     "mispredicted": 112,
+     "predicted": 804,
      "stalls": 0,
-     "error_sum": 18.7557,
-     "error_max": 2.126,
-     "bytes_out": 18854,
-     "bytes_in": 13292,
-     "packets_out": 808,
-     "packets_in": 788
+     "error_sum": 15.0059,
+     "error_max": 1.6602,
+     "bytes_out": 19489,
+     "bytes_in": 13519,
+     "packets_out": 837,
+     "packets_in": 809
     },
     {
      "player": 1,
      "bot": "random",
      "winner": 0,
      "desyncs": 0,
-     "seconds": 13.02,
-     "frames": 779,
-     "rollbacks": 66,
-     "resimulated": 207,
-     "max_rollback": 5,
-     "mispredicted": 84,
-     "predicted": 775,
+     "seconds": 13.48,
+     "frames": 806,
+     "rollbacks": 63,
+     "resimulated": 277,
+     "max_rollback": 6,
+     "mispredicted": 89,
+     "predicted": 804,
      "stalls": 0,
-     "error_sum": 7.7477,
-     "error_max": 1.4231,
-     "bytes_out": 18893,
-     "bytes_in": 13285,
-     "packets_out": 807,
-     "packets_in": 791
+     "error_sum": 14.2409,
+     "error_max": 1.5436,
+     "bytes_out": 19496,
+     "bytes_in": 13969,
+     "packets_out": 834,
+     "packets_in": 826
     }
    ],
    "server": {
-    "match": 1517955075,
+    "match": 1874886342,
     "winner": 0,
     "forfeit": false,
-    "frames": 776,
+    "frames": 802,
     "desyncs": 0,
-    "checksums": 50,
+    "checksums": 52,
     "bytes_in": [
-     18535,
-     18589
+     19275,
+     19031
     ],
     "bytes_out": [
-     13412,
-     13361
+     13630,
+     14039
     ],
-    "seconds": 13.027
+    "seconds": 13.451
    }
   },
   {
-   "match": 189903534,
+   "match": 1607217296,
    "bots": [
     "random",
     "chase"
@@ -79,62 +79,62 @@
      "bot": "random",
      "winner": 1,
      "desyncs": 0,
-     "seconds": 11.38,
-     "frames": 680,
-     "rollbacks": 29,
-     "resimulated": 145,
-     "max_rollback": 7,
-     "mispredicted": 44,
-     "predicted": 678,
+     "seconds": 7.64,
+     "frames": 456,
+     "rollbacks": 18,
+     "resimulated": 65,
+     "max_rollback": 5,
+     "mispredicted": 25,
+     "predicted": 454,
      "stalls": 0,
-     "error_sum": 5.2716,
-     "error_max": 1.42,
-     "bytes_out": 16596,
-     "bytes_in": 11488,
-     "packets_out": 707,
-     "packets_in": 681
+     "error_sum": 3.9203,
+     "error_max": 1.1798,
+     "bytes_out": 11065,
+     "bytes_in": 7750,
+     "packets_out": 473,
+     "packets_in": 462
     },
     {
      "player": 1,
      "bot": "chase",
      "winner": 1,
      "desyncs": 0,
-     "seconds": 11.39,
-     "frames": 681,
-     "rollbacks": 54,
-     "resimulated": 215,
-     "max_rollback": 5,
-     "mispredicted": 82,
-     "predicted": 679,
+     "seconds": 7.64,
+     "frames": 456,
+     "rollbacks": 36,
+     "resimulated": 181,
+     "max_rollback": 7,
+     "mispredicted": 50,
+     "predicted": 454,
      "stalls": 0,
-     "error_sum": 10.4553,
-     "error_max": 1.4133,
-     "bytes_out": 16566,
-     "bytes_in": 11745,
-     "packets_out": 707,
-     "packets_in": 695
+     "error_sum": 8.1075,
+     "error_max": 1.5118,
+     "bytes_out": 11049,
+     "bytes_in": 7627,
+     "packets_out": 473,
+     "packets_in": 457
     }
    ],
    "server": {
-    "match": 189903534,
+    "match": 1607217296,
     "winner": 1,
     "forfeit": false,
-    "frames": 678,
+    "frames": 453,
     "desyncs": 0,
-    "checksums": 42,
+    "checksums": 28,
     "bytes_in": [
-     16305,
-     16203
+     10816,
+     10810
     ],
     "bytes_out": [
-     11704,
-     11767
+     7793,
+     7753
     ],
-    "seconds": 11.365
+    "seconds": 7.634
    }
   },
   {
-   "match": 1554239433,
+   "match": 1551299431,
    "bots": [
     "chase",
     "random"
@@ -145,62 +145,62 @@
      "bot": "chase",
      "winner": 0,
      "desyncs": 0,
-     "seconds": 17.27,
-     "frames": 1034,
-     "rollbacks": 92,
-     "resimulated": 468,
-     "max_rollback": 7,
-     "mispredicted": 138,
-     "predicted": 1032,
+     "seconds": 12.16,
+     "frames": 727,
+     "rollbacks": 68,
+     "resimulated": 298,
+     "max_rollback": 6,
+     "mispredicted": 100,
+     "predicted": 725,
      "stalls": 0,
-     "error_sum": 20.4368,
-     "error_max": 2.482,
-     "bytes_out": 25054,
-     "bytes_in": 17534,
-     "packets_out": 1073,
-     "packets_in": 1038
+     "error_sum": 15.6213,
+     "error_max": 1.9951,
+     "bytes_out": 17582,
+     "bytes_in": 12510,
+     "packets_out": 751,
+     "packets_in": 740
     },
     {
      "player": 1,
      "bot": "random",
      "winner": 0,
      "desyncs": 0,
-     "seconds": 17.28,
-     "frames": 1034,
-     "rollbacks": 135,
-     "resimulated": 498,
+     "seconds": 12.17,
+     "frames": 728,
+     "rollbacks": 110,
+     "resimulated": 505,
      "max_rollback": 6,
-     "mispredicted": 180,
-     "predicted": 1032,
+     "mispredicted": 158,
+     "predicted": 726,
      "stalls": 0,
-     "error_sum": 13.6972,
-     "error_max": 1.3156,
-     "bytes_out": 25050,
-     "bytes_in": 17804,
-     "packets_out": 1070,
-     "packets_in": 1054
+     "error_sum": 15.8481,
+     "error_max": 1.476,
+     "bytes_out": 17616,
+     "bytes_in": 12427,
+     "packets_out": 752,
+     "packets_in": 737
     }
    ],
    "server": {
-    "match": 1554239433,
+    "match": 1551299431,
     "winner": 0,
     "forfeit": false,
-    "frames": 1030,
+    "frames": 724,
     "desyncs": 0,
-    "checksums": 67,
+    "checksums": 46,
     "bytes_in": [
-     24737,
-     24599
+     17292,
+     17367
     ],
     "bytes_out": [
-     17787,
-     17916
+     12573,
+     12490
     ],
-    "seconds": 17.251
+    "seconds": 12.144
    }
   },
   {
-   "match": 71566090,
+   "match": 1693144566,
    "bots": [
     "random",
     "chase"
@@ -209,60 +209,60 @@
     {
      "player": 0,
      "bot": "random",
-     "winner": 1,
-     "desyncs": 0,
-     "seconds": 8.28,
-     "frames": 494,
-     "rollbacks": 34,
-     "resimulated": 153,
-     "max_rollback": 6,
-     "mispredicted": 47,
-     "predicted": 492,
-     "stalls": 0,
-     "error_sum": 6.3329,
-     "error_max": 1.2829,
-     "bytes_out": 12044,
-     "bytes_in": 8371,
-     "packets_out": 514,
-     "packets_in": 497
-    },
-    {
-     "player": 1,
-     "bot": "chase",
      "winner": 1,
      "desyncs": 0,
      "seconds": 8.27,
      "frames": 494,
-     "rollbacks": 44,
-     "resimulated": 214,
-     "max_rollback": 7,
-     "mispredicted": 71,
+     "rollbacks": 34,
+     "resimulated": 135,
+     "max_rollback": 6,
+     "mispredicted": 47,
      "predicted": 492,
      "stalls": 0,
-     "error_sum": 6.2958,
-     "error_max": 1.0002,
-     "bytes_out": 11979,
-     "bytes_in": 8399,
+     "error_sum": 5.8837,
+     "error_max": 1.4969,
+     "bytes_out": 12041,
+     "bytes_in": 8373,
      "packets_out": 513,
-     "packets_in": 499
+     "packets_in": 498
+    },
+    {
+     "player": 1,
+     "bot": "chase",
+     "winner": 1,
+     "desyncs": 0,
+     "seconds": 8.29,
+     "frames": 495,
+     "rollbacks": 43,
+     "resimulated": 221,
+     "max_rollback": 7,
+     "mispredicted": 61,
+     "predicted": 493,
+     "stalls": 0,
+     "error_sum": 6.7708,
+     "error_max": 1.3843,
+     "bytes_out": 12051,
+     "bytes_in": 8444,
+     "packets_out": 514,
+     "packets_in": 501
     }
    ],
    "server": {
-    "match": 71566090,
+    "match": 1693144566,
     "winner": 1,
     "forfeit": false,
     "frames": 490,
     "desyncs": 0,
     "checksums": 32,
     "bytes_in": [
-     11800,
-     11768
+     11789,
+     11751
     ],
     "bytes_out": [
-     8516,
-     8494
+     8453,
+     8500
     ],
-    "seconds": 8.244
+    "seconds": 8.267
    }
   }
  ]

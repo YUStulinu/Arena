@@ -15,15 +15,18 @@ defmodule ArenaMm.Http do
   def listen(opts) do
     port = Keyword.get(opts, :port, 8080)
     static = Keyword.get(opts, :static)
-    {:ok, ls} = :gen_tcp.listen(port, [:binary, packet: :raw, active: false, reuseaddr: true])
+    # a deep accept queue: polling clients arrive in bursts (the default of 5 resets connections on Windows)
+    {:ok, ls} = :gen_tcp.listen(port, [:binary, packet: :raw, active: false, reuseaddr: true, backlog: 128])
     Logger.info("matchmaker http on port #{port}")
     accept(ls, static)
   end
 
   defp accept(ls, static) do
     {:ok, s} = :gen_tcp.accept(ls)
-    pid = spawn(fn -> serve(s, static) end)
+    # the connection process starts only once it owns the socket
+    pid = spawn(fn -> receive(do: (:go -> serve(s, static))) end)
     :gen_tcp.controlling_process(s, pid)
+    send(pid, :go)
     accept(ls, static)
   end
 

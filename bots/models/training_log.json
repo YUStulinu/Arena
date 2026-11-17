@@ -1,0 +1,632 @@
+[
+ {
+  "steps": 65536,
+  "minutes": 0.06,
+  "decisions_per_s": 18360,
+  "mean_round_diff": 0.12037037037037036,
+  "win_rate_mixed_opponents": 0.5277777777777778,
+  "entropy": 3.535,
+  "value_loss": 0.1738
+ },
+ {
+  "steps": 131072,
+  "minutes": 0.11,
+  "decisions_per_s": 19160,
+  "mean_round_diff": 0.145748987854251,
+  "win_rate_mixed_opponents": 0.5384615384615384,
+  "entropy": 3.547,
+  "value_loss": 0.1472
+ },
+ {
+  "steps": 212992,
+  "minutes": 0.18,
+  "decisions_per_s": 19517,
+  "mean_round_diff": 0.017391304347826087,
+  "win_rate_mixed_opponents": 0.5,
+  "entropy": 3.493,
+  "value_loss": 0.0986
+ },
+ {
+  "steps": 458752,
+  "minutes": 0.41,
+  "decisions_per_s": 18547,
+  "mean_round_diff": -0.18226600985221675,
+  "win_rate_mixed_opponents": 0.4729064039408867,
+  "entropy": 3.296,
+  "value_loss": 0.0253
+ },
+ {
+  "steps": 950272,
+  "minutes": 0.84,
+  "decisions_per_s": 18943,
+  "mean_round_diff": -0.15422885572139303,
+  "win_rate_mixed_opponents": 0.40298507462686567,
+  "entropy": 3.02,
+  "value_loss": 0.0143
+ },
+ {
+  "steps": 1441792,
+  "minutes": 1.27,
+  "decisions_per_s": 18892,
+  "mean_round_diff": -0.095,
+  "win_rate_mixed_opponents": 0.19,
+  "entropy": 2.908,
+  "value_loss": 0.0098
+ },
+ {
+  "steps": 1982464,
+  "minutes": 1.74,
+  "decisions_per_s": 19013,
+  "mean_round_diff": 0.0784313725490196,
+  "win_rate_mixed_opponents": 0.14215686274509803,
+  "entropy": 2.905,
+  "value_loss": 0.0083
+ },
+ {
+  "steps": 2457600,
+  "minutes": 2.24,
+  "decisions_per_s": 18293,
+  "mean_round_diff": 0.11822660098522167,
+  "win_rate_mixed_opponents": 0.1625615763546798,
+  "entropy": 2.851,
+  "value_loss": 0.0107
+ },
+ {
+  "steps": 2932736,
+  "minutes": 2.78,
+  "decisions_per_s": 17561,
+  "mean_round_diff": 0.1188118811881188,
+  "win_rate_mixed_opponents": 0.18811881188118812,
+  "entropy": 2.822,
+  "value_loss": 0.0107
+ },
+ {
+  "steps": 3424256,
+  "minutes": 3.33,
+  "decisions_per_s": 17152,
+  "mean_round_diff": 0.0196078431372549,
+  "win_rate_mixed_opponents": 0.1715686274509804,
+  "entropy": 2.806,
+  "value_loss": 0.0128
+ },
+ {
+  "steps": 3883008,
+  "minutes": 3.86,
+  "decisions_per_s": 16753,
+  "mean_round_diff": 0.3399014778325123,
+  "win_rate_mixed_opponents": 0.21182266009852216,
+  "entropy": 2.811,
+  "value_loss": 0.0121
+ },
+ {
+  "steps": 4374528,
+  "minutes": 4.49,
+  "decisions_per_s": 16245,
+  "mean_round_diff": 0.4029126213592233,
+  "win_rate_mixed_opponents": 0.24271844660194175,
+  "entropy": 2.753,
+  "value_loss": 0.007
+ },
+ {
+  "steps": 4849664,
+  "minutes": 5.13,
+  "decisions_per_s": 15742,
+  "mean_round_diff": 0.44607843137254904,
+  "win_rate_mixed_opponents": 0.2549019607843137,
+  "entropy": 2.743,
+  "value_loss": 0.0133
+ },
+ {
+  "steps": 5292032,
+  "minutes": 5.76,
+  "decisions_per_s": 15314,
+  "mean_round_diff": 0.463768115942029,
+  "win_rate_mixed_opponents": 0.2463768115942029,
+  "entropy": 2.76,
+  "value_loss": 0.0113
+ },
+ {
+  "steps": 5750784,
+  "minutes": 6.4,
+  "decisions_per_s": 14972,
+  "mean_round_diff": 0.5219512195121951,
+  "win_rate_mixed_opponents": 0.25365853658536586,
+  "entropy": 2.744,
+  "value_loss": 0.0153
+ },
+ {
+  "steps": 6242304,
+  "minutes": 7.13,
+  "decisions_per_s": 14597,
+  "mean_round_diff": 0.4975124378109453,
+  "win_rate_mixed_opponents": 0.20398009950248755,
+  "entropy": 2.73,
+  "value_loss": 0.0127
+ },
+ {
+  "steps": 6701056,
+  "minutes": 7.86,
+  "decisions_per_s": 14217,
+  "mean_round_diff": 0.23,
+  "win_rate_mixed_opponents": 0.185,
+  "entropy": 2.756,
+  "value_loss": 0.0096
+ },
+ {
+  "steps": 7192576,
+  "minutes": 8.63,
+  "decisions_per_s": 13894,
+  "mean_round_diff": 0.4950980392156863,
+  "win_rate_mixed_opponents": 0.19607843137254902,
+  "entropy": 2.695,
+  "value_loss": 0.0082
+ },
+ {
+  "steps": 7651328,
+  "minutes": 9.38,
+  "decisions_per_s": 13602,
+  "mean_round_diff": 0.56,
+  "win_rate_mixed_opponents": 0.23,
+  "entropy": 2.72,
+  "value_loss": 0.0044
+ },
+ {
+  "steps": 8110080,
+  "minutes": 10.13,
+  "decisions_per_s": 13342,
+  "mean_round_diff": 0.4585365853658537,
+  "win_rate_mixed_opponents": 0.2048780487804878,
+  "entropy": 2.653,
+  "value_loss": 0.0107
+ },
+ {
+  "steps": 8601600,
+  "minutes": 11.07,
+  "decisions_per_s": 12950,
+  "mean_round_diff": 0.7487684729064039,
+  "win_rate_mixed_opponents": 0.28078817733990147,
+  "entropy": 2.716,
+  "value_loss": 0.0108
+ },
+ {
+  "steps": 9043968,
+  "minutes": 11.9,
+  "decisions_per_s": 12670,
+  "mean_round_diff": 0.635,
+  "win_rate_mixed_opponents": 0.295,
+  "entropy": 2.73,
+  "value_loss": 0.0107
+ },
+ {
+  "steps": 9486336,
+  "minutes": 12.71,
+  "decisions_per_s": 12440,
+  "mean_round_diff": 0.725,
+  "win_rate_mixed_opponents": 0.29,
+  "entropy": 2.681,
+  "value_loss": 0.0122
+ },
+ {
+  "steps": 9977856,
+  "minutes": 13.68,
+  "decisions_per_s": 12153,
+  "mean_round_diff": 0.5951219512195122,
+  "win_rate_mixed_opponents": 0.32195121951219513,
+  "entropy": 2.648,
+  "value_loss": 0.0104
+ },
+ {
+  "steps": 10403840,
+  "minutes": 14.57,
+  "decisions_per_s": 11901,
+  "mean_round_diff": 0.8805970149253731,
+  "win_rate_mixed_opponents": 0.3333333333333333,
+  "entropy": 2.679,
+  "value_loss": 0.011
+ },
+ {
+  "steps": 10862592,
+  "minutes": 15.6,
+  "decisions_per_s": 11602,
+  "mean_round_diff": 0.7029702970297029,
+  "win_rate_mixed_opponents": 0.3465346534653465,
+  "entropy": 2.63,
+  "value_loss": 0.0133
+ },
+ {
+  "steps": 11321344,
+  "minutes": 16.77,
+  "decisions_per_s": 11249,
+  "mean_round_diff": 0.7142857142857143,
+  "win_rate_mixed_opponents": 0.2857142857142857,
+  "entropy": 2.621,
+  "value_loss": 0.0133
+ },
+ {
+  "steps": 11796480,
+  "minutes": 17.93,
+  "decisions_per_s": 10968,
+  "mean_round_diff": 0.6421568627450981,
+  "win_rate_mixed_opponents": 0.29901960784313725,
+  "entropy": 2.668,
+  "value_loss": 0.0073
+ },
+ {
+  "steps": 12255232,
+  "minutes": 19.16,
+  "decisions_per_s": 10661,
+  "mean_round_diff": 0.8522167487684729,
+  "win_rate_mixed_opponents": 0.3054187192118227,
+  "entropy": 2.64,
+  "value_loss": 0.0112
+ },
+ {
+  "steps": 12713984,
+  "minutes": 20.23,
+  "decisions_per_s": 10473,
+  "mean_round_diff": 0.7910447761194029,
+  "win_rate_mixed_opponents": 0.31840796019900497,
+  "entropy": 2.593,
+  "value_loss": 0.0104
+ },
+ {
+  "steps": 13172736,
+  "minutes": 21.44,
+  "decisions_per_s": 10241,
+  "mean_round_diff": 0.8620689655172413,
+  "win_rate_mixed_opponents": 0.39408866995073893,
+  "entropy": 2.577,
+  "value_loss": 0.0108
+ },
+ {
+  "steps": 13615104,
+  "minutes": 22.48,
+  "decisions_per_s": 10095,
+  "mean_round_diff": 1.0246305418719213,
+  "win_rate_mixed_opponents": 0.43842364532019706,
+  "entropy": 2.555,
+  "value_loss": 0.0124
+ },
+ {
+  "steps": 14057472,
+  "minutes": 23.52,
+  "decisions_per_s": 9962,
+  "mean_round_diff": 1.103448275862069,
+  "win_rate_mixed_opponents": 0.47783251231527096,
+  "entropy": 2.53,
+  "value_loss": 0.0126
+ },
+ {
+  "steps": 14483456,
+  "minutes": 25.25,
+  "decisions_per_s": 9559,
+  "mean_round_diff": 1.2427184466019416,
+  "win_rate_mixed_opponents": 0.46116504854368934,
+  "entropy": 2.544,
+  "value_loss": 0.0149
+ },
+ {
+  "steps": 14925824,
+  "minutes": 27.12,
+  "decisions_per_s": 9173,
+  "mean_round_diff": 1.2195121951219512,
+  "win_rate_mixed_opponents": 0.4634146341463415,
+  "entropy": 2.518,
+  "value_loss": 0.0143
+ },
+ {
+  "steps": 15384576,
+  "minutes": 29.44,
+  "decisions_per_s": 8710,
+  "mean_round_diff": 0.9514563106796117,
+  "win_rate_mixed_opponents": 0.39805825242718446,
+  "entropy": 2.479,
+  "value_loss": 0.0111
+ },
+ {
+  "steps": 15810560,
+  "minutes": 31.13,
+  "decisions_per_s": 8465,
+  "mean_round_diff": 1.125,
+  "win_rate_mixed_opponents": 0.485,
+  "entropy": 2.472,
+  "value_loss": 0.0112
+ },
+ {
+  "steps": 16269312,
+  "minutes": 32.9,
+  "decisions_per_s": 8242,
+  "mean_round_diff": 1.2216748768472907,
+  "win_rate_mixed_opponents": 0.45320197044334976,
+  "entropy": 2.476,
+  "value_loss": 0.0096
+ },
+ {
+  "steps": 16711680,
+  "minutes": 34.29,
+  "decisions_per_s": 8122,
+  "mean_round_diff": 1.0817307692307692,
+  "win_rate_mixed_opponents": 0.4519230769230769,
+  "entropy": 2.469,
+  "value_loss": 0.0119
+ },
+ {
+  "steps": 17170432,
+  "minutes": 35.85,
+  "decisions_per_s": 7982,
+  "mean_round_diff": 1.116504854368932,
+  "win_rate_mixed_opponents": 0.49029126213592233,
+  "entropy": 2.449,
+  "value_loss": 0.0117
+ },
+ {
+  "steps": 17580032,
+  "minutes": 37.26,
+  "decisions_per_s": 7864,
+  "mean_round_diff": 0.995,
+  "win_rate_mixed_opponents": 0.445,
+  "entropy": 2.488,
+  "value_loss": 0.0127
+ },
+ {
+  "steps": 18038784,
+  "minutes": 38.59,
+  "decisions_per_s": 7791,
+  "mean_round_diff": 1.2727272727272727,
+  "win_rate_mixed_opponents": 0.49760765550239233,
+  "entropy": 2.518,
+  "value_loss": 0.0094
+ },
+ {
+  "steps": 18448384,
+  "minutes": 39.91,
+  "decisions_per_s": 7703,
+  "mean_round_diff": 1.2561576354679802,
+  "win_rate_mixed_opponents": 0.5073891625615764,
+  "entropy": 2.508,
+  "value_loss": 0.0147
+ },
+ {
+  "steps": 18890752,
+  "minutes": 41.24,
+  "decisions_per_s": 7634,
+  "mean_round_diff": 1.0348258706467661,
+  "win_rate_mixed_opponents": 0.46766169154228854,
+  "entropy": 2.48,
+  "value_loss": 0.0108
+ },
+ {
+  "steps": 19349504,
+  "minutes": 42.7,
+  "decisions_per_s": 7553,
+  "mean_round_diff": 1.1691542288557213,
+  "win_rate_mixed_opponents": 0.42786069651741293,
+  "entropy": 2.451,
+  "value_loss": 0.0072
+ },
+ {
+  "steps": 19791872,
+  "minutes": 44.08,
+  "decisions_per_s": 7483,
+  "mean_round_diff": 1.297029702970297,
+  "win_rate_mixed_opponents": 0.47029702970297027,
+  "entropy": 2.461,
+  "value_loss": 0.0124
+ },
+ {
+  "steps": 20250624,
+  "minutes": 45.56,
+  "decisions_per_s": 7408,
+  "mean_round_diff": 1.1773399014778325,
+  "win_rate_mixed_opponents": 0.4433497536945813,
+  "entropy": 2.471,
+  "value_loss": 0.0072
+ },
+ {
+  "steps": 20660224,
+  "minutes": 47.09,
+  "decisions_per_s": 7313,
+  "mean_round_diff": 1.1635514018691588,
+  "win_rate_mixed_opponents": 0.5093457943925234,
+  "entropy": 2.504,
+  "value_loss": 0.0151
+ },
+ {
+  "steps": 21135360,
+  "minutes": 49.17,
+  "decisions_per_s": 7164,
+  "mean_round_diff": 1.1492537313432836,
+  "win_rate_mixed_opponents": 0.46766169154228854,
+  "entropy": 2.5,
+  "value_loss": 0.0104
+ },
+ {
+  "steps": 21561344,
+  "minutes": 50.74,
+  "decisions_per_s": 7082,
+  "mean_round_diff": 1.0147058823529411,
+  "win_rate_mixed_opponents": 0.46078431372549017,
+  "entropy": 2.5,
+  "value_loss": 0.014
+ },
+ {
+  "steps": 22003712,
+  "minutes": 52.21,
+  "decisions_per_s": 7024,
+  "mean_round_diff": 1.103960396039604,
+  "win_rate_mixed_opponents": 0.41089108910891087,
+  "entropy": 2.48,
+  "value_loss": 0.014
+ },
+ {
+  "steps": 22446080,
+  "minutes": 53.66,
+  "decisions_per_s": 6972,
+  "mean_round_diff": 1.2266009852216748,
+  "win_rate_mixed_opponents": 0.49261083743842365,
+  "entropy": 2.472,
+  "value_loss": 0.0107
+ },
+ {
+  "steps": 22872064,
+  "minutes": 55.15,
+  "decisions_per_s": 6913,
+  "mean_round_diff": 1.1435643564356435,
+  "win_rate_mixed_opponents": 0.45544554455445546,
+  "entropy": 2.487,
+  "value_loss": 0.008
+ },
+ {
+  "steps": 23314432,
+  "minutes": 56.66,
+  "decisions_per_s": 6858,
+  "mean_round_diff": 1.0048076923076923,
+  "win_rate_mixed_opponents": 0.44711538461538464,
+  "entropy": 2.461,
+  "value_loss": 0.0109
+ },
+ {
+  "steps": 23756800,
+  "minutes": 58.43,
+  "decisions_per_s": 6776,
+  "mean_round_diff": 1.193069306930693,
+  "win_rate_mixed_opponents": 0.4603960396039604,
+  "entropy": 2.506,
+  "value_loss": 0.0137
+ },
+ {
+  "steps": 24166400,
+  "minutes": 59.82,
+  "decisions_per_s": 6733,
+  "mean_round_diff": 1.1741293532338308,
+  "win_rate_mixed_opponents": 0.4527363184079602,
+  "entropy": 2.491,
+  "value_loss": 0.0121
+ },
+ {
+  "steps": 24608768,
+  "minutes": 61.45,
+  "decisions_per_s": 6675,
+  "mean_round_diff": 1.0394088669950738,
+  "win_rate_mixed_opponents": 0.4433497536945813,
+  "entropy": 2.456,
+  "value_loss": 0.0117
+ },
+ {
+  "steps": 25067520,
+  "minutes": 63.02,
+  "decisions_per_s": 6630,
+  "mean_round_diff": 1.0891089108910892,
+  "win_rate_mixed_opponents": 0.39603960396039606,
+  "entropy": 2.457,
+  "value_loss": 0.0124
+ },
+ {
+  "steps": 25526272,
+  "minutes": 64.67,
+  "decisions_per_s": 6579,
+  "mean_round_diff": 1.1323529411764706,
+  "win_rate_mixed_opponents": 0.4068627450980392,
+  "entropy": 2.487,
+  "value_loss": 0.0086
+ },
+ {
+  "steps": 25968640,
+  "minutes": 66.21,
+  "decisions_per_s": 6537,
+  "mean_round_diff": 1.0394088669950738,
+  "win_rate_mixed_opponents": 0.3891625615763547,
+  "entropy": 2.48,
+  "value_loss": 0.0135
+ },
+ {
+  "steps": 26378240,
+  "minutes": 67.67,
+  "decisions_per_s": 6497,
+  "mean_round_diff": 1.2315270935960592,
+  "win_rate_mixed_opponents": 0.46798029556650245,
+  "entropy": 2.49,
+  "value_loss": 0.0115
+ },
+ {
+  "steps": 26820608,
+  "minutes": 69.22,
+  "decisions_per_s": 6458,
+  "mean_round_diff": 0.9900497512437811,
+  "win_rate_mixed_opponents": 0.4079601990049751,
+  "entropy": 2.496,
+  "value_loss": 0.01
+ },
+ {
+  "steps": 27246592,
+  "minutes": 70.78,
+  "decisions_per_s": 6416,
+  "mean_round_diff": 1.203883495145631,
+  "win_rate_mixed_opponents": 0.46116504854368934,
+  "entropy": 2.468,
+  "value_loss": 0.0112
+ },
+ {
+  "steps": 27688960,
+  "minutes": 72.49,
+  "decisions_per_s": 6367,
+  "mean_round_diff": 1.202970297029703,
+  "win_rate_mixed_opponents": 0.4504950495049505,
+  "entropy": 2.472,
+  "value_loss": 0.0111
+ },
+ {
+  "steps": 28131328,
+  "minutes": 74.14,
+  "decisions_per_s": 6324,
+  "mean_round_diff": 1.1067961165048543,
+  "win_rate_mixed_opponents": 0.41262135922330095,
+  "entropy": 2.445,
+  "value_loss": 0.0147
+ },
+ {
+  "steps": 28573696,
+  "minutes": 75.82,
+  "decisions_per_s": 6281,
+  "mean_round_diff": 1.301980198019802,
+  "win_rate_mixed_opponents": 0.5198019801980198,
+  "entropy": 2.473,
+  "value_loss": 0.0148
+ },
+ {
+  "steps": 28983296,
+  "minutes": 77.4,
+  "decisions_per_s": 6241,
+  "mean_round_diff": 1.1778846153846154,
+  "win_rate_mixed_opponents": 0.4951923076923077,
+  "entropy": 2.489,
+  "value_loss": 0.0094
+ },
+ {
+  "steps": 29409280,
+  "minutes": 79.05,
+  "decisions_per_s": 6201,
+  "mean_round_diff": 1.1293532338308458,
+  "win_rate_mixed_opponents": 0.4527363184079602,
+  "entropy": 2.454,
+  "value_loss": 0.0113
+ },
+ {
+  "steps": 29851648,
+  "minutes": 80.75,
+  "decisions_per_s": 6161,
+  "mean_round_diff": 1.2623762376237624,
+  "win_rate_mixed_opponents": 0.4900990099009901,
+  "entropy": 2.448,
+  "value_loss": 0.0096
+ },
+ {
+  "steps": 30015488,
+  "minutes": 81.38,
+  "decisions_per_s": 6147,
+  "mean_round_diff": 1.2317073170731707,
+  "win_rate_mixed_opponents": 0.43902439024390244,
+  "entropy": 2.398,
+  "value_loss": 0.0116
+ }
+]
