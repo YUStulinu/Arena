@@ -152,6 +152,7 @@ async function online(name: string) {
     if (!m) return;
     if (m.kind === "welcome") delay = m.delay;
     else if (m.kind === "start" && !session) {
+      if (m.delay >= 0) delay = m.delay;
       session = game.session(t.player, delay);
       t0 = performance.now();
       status(`match ${t.match}: you are ${t.player === 0 ? "blue" : "orange"}`);

@@ -128,8 +128,8 @@ impl Server {
                 self.send(match_id, p, proto::welcome(match_id, player, delay));
                 if both {
                     // (again) to both: a lost START is repaired by the next HELLO
-                    self.send(match_id, 0, vec![proto::START]);
-                    self.send(match_id, 1, vec![proto::START]);
+                    self.send(match_id, 0, vec![proto::START, delay]);
+                    self.send(match_id, 1, vec![proto::START, delay]);
                 }
             }
             ClientMsg::Input { match_id, player, have_remote, first, inputs, checksums } => {
@@ -284,7 +284,7 @@ mod tests {
         s.handle(b, &proto::encode_client(&ClientMsg::Hello { match_id: 1, player: 1, token: 99 }), now); // wrong token
         assert!(s.outbox.iter().any(|(p, d)| *p == b && d[0] == proto::ERROR));
         s.handle(b, &proto::encode_client(&ClientMsg::Hello { match_id: 1, player: 1, token: 22 }), now);
-        assert!(s.outbox.iter().any(|(p, d)| *p == a && d == &vec![proto::START]));
+        assert!(s.outbox.iter().any(|(p, d)| *p == a && d == &vec![proto::START, 2]));
         s.outbox.clear();
         // 60 frames of inputs from both; b claims the right hash for frame 30, a a wrong one
         let mut reference = Game::new(&script()).unwrap();

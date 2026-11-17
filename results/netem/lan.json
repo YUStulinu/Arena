@@ -1,0 +1,269 @@
+{
+ "scenario": "lan",
+ "matches": [
+  {
+   "match": 611926504,
+   "bots": [
+    "chase",
+    "random"
+   ],
+   "clients": [
+    {
+     "player": 0,
+     "bot": "chase",
+     "winner": 0,
+     "desyncs": 0,
+     "seconds": 19.57,
+     "frames": 1172,
+     "rollbacks": 0,
+     "resimulated": 0,
+     "max_rollback": 0,
+     "mispredicted": 0,
+     "predicted": 0,
+     "stalls": 0,
+     "error_sum": 0.0,
+     "error_max": 0.0,
+     "bytes_out": 21406,
+     "bytes_in": 13662,
+     "packets_out": 1212,
+     "packets_in": 1214
+    },
+    {
+     "player": 1,
+     "bot": "random",
+     "winner": 0,
+     "desyncs": 0,
+     "seconds": 19.57,
+     "frames": 1172,
+     "rollbacks": 0,
+     "resimulated": 0,
+     "max_rollback": 0,
+     "mispredicted": 0,
+     "predicted": 0,
+     "stalls": 0,
+     "error_sum": 0.0,
+     "error_max": 0.0,
+     "bytes_out": 21404,
+     "bytes_in": 13648,
+     "packets_out": 1212,
+     "packets_in": 1214
+    }
+   ],
+   "server": {
+    "match": 611926504,
+    "winner": 0,
+    "forfeit": false,
+    "frames": 1174,
+    "desyncs": 0,
+    "checksums": 78,
+    "bytes_in": [
+     21406,
+     21404
+    ],
+    "bytes_out": [
+     13656,
+     13642
+    ],
+    "seconds": 19.548
+   }
+  },
+  {
+   "match": 1920456502,
+   "bots": [
+    "random",
+    "chase"
+   ],
+   "clients": [
+    {
+     "player": 0,
+     "bot": "random",
+     "winner": 1,
+     "desyncs": 0,
+     "seconds": 7.73,
+     "frames": 462,
+     "rollbacks": 0,
+     "resimulated": 0,
+     "max_rollback": 0,
+     "mispredicted": 0,
+     "predicted": 0,
+     "stalls": 0,
+     "error_sum": 0.0,
+     "error_max": 0.0,
+     "bytes_out": 8314,
+     "bytes_in": 5258,
+     "packets_out": 479,
+     "packets_in": 481
+    },
+    {
+     "player": 1,
+     "bot": "chase",
+     "winner": 1,
+     "desyncs": 0,
+     "seconds": 7.74,
+     "frames": 462,
+     "rollbacks": 0,
+     "resimulated": 0,
+     "max_rollback": 0,
+     "mispredicted": 0,
+     "predicted": 0,
+     "stalls": 0,
+     "error_sum": 0.0,
+     "error_max": 0.0,
+     "bytes_out": 8314,
+     "bytes_in": 5258,
+     "packets_out": 479,
+     "packets_in": 481
+    }
+   ],
+   "server": {
+    "match": 1920456502,
+    "winner": 1,
+    "forfeit": false,
+    "frames": 464,
+    "desyncs": 0,
+    "checksums": 30,
+    "bytes_in": [
+     8314,
+     8314
+    ],
+    "bytes_out": [
+     5252,
+     5252
+    ],
+    "seconds": 7.715
+   }
+  },
+  {
+   "match": 407126671,
+   "bots": [
+    "chase",
+    "random"
+   ],
+   "clients": [
+    {
+     "player": 0,
+     "bot": "chase",
+     "winner": 0,
+     "desyncs": 0,
+     "seconds": 11.79,
+     "frames": 705,
+     "rollbacks": 0,
+     "resimulated": 0,
+     "max_rollback": 0,
+     "mispredicted": 0,
+     "predicted": 0,
+     "stalls": 0,
+     "error_sum": 0.0,
+     "error_max": 0.0,
+     "bytes_out": 12954,
+     "bytes_in": 8299,
+     "packets_out": 729,
+     "packets_in": 731
+    },
+    {
+     "player": 1,
+     "bot": "random",
+     "winner": 0,
+     "desyncs": 0,
+     "seconds": 11.79,
+     "frames": 705,
+     "rollbacks": 0,
+     "resimulated": 0,
+     "max_rollback": 0,
+     "mispredicted": 0,
+     "predicted": 0,
+     "stalls": 0,
+     "error_sum": 0.0,
+     "error_max": 0.0,
+     "bytes_out": 12944,
+     "bytes_in": 8285,
+     "packets_out": 729,
+     "packets_in": 731
+    }
+   ],
+   "server": {
+    "match": 407126671,
+    "winner": 0,
+    "forfeit": false,
+    "frames": 707,
+    "desyncs": 0,
+    "checksums": 46,
+    "bytes_in": [
+     12954,
+     12944
+    ],
+    "bytes_out": [
+     8293,
+     8279
+    ],
+    "seconds": 11.767
+   }
+  },
+  {
+   "match": 2071575108,
+   "bots": [
+    "random",
+    "chase"
+   ],
+   "clients": [
+    {
+     "player": 0,
+     "bot": "random",
+     "winner": 1,
+     "desyncs": 0,
+     "seconds": 8.2,
+     "frames": 490,
+     "rollbacks": 0,
+     "resimulated": 0,
+     "max_rollback": 0,
+     "mispredicted": 0,
+     "predicted": 0,
+     "stalls": 0,
+     "error_sum": 0.0,
+     "error_max": 0.0,
+     "bytes_out": 8976,
+     "bytes_in": 5739,
+     "packets_out": 508,
+     "packets_in": 510
+    },
+    {
+     "player": 1,
+     "bot": "chase",
+     "winner": 1,
+     "desyncs": 0,
+     "seconds": 8.2,
+     "frames": 490,
+     "rollbacks": 0,
+     "resimulated": 0,
+     "max_rollback": 0,
+     "mispredicted": 0,
+     "predicted": 0,
+     "stalls": 0,
+     "error_sum": 0.0,
+     "error_max": 0.0,
+     "bytes_out": 8978,
+     "bytes_in": 5730,
+     "packets_out": 508,
+     "packets_in": 510
+    }
+   ],
+   "server": {
+    "match": 2071575108,
+    "winner": 1,
+    "forfeit": false,
+    "frames": 492,
+    "desyncs": 0,
+    "checksums": 32,
+    "bytes_in": [
+     8976,
+     8978
+    ],
+    "bytes_out": [
+     5733,
+     5724
+    ],
+    "seconds": 8.177
+   }
+  }
+ ]
+}

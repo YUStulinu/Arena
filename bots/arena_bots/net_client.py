@@ -47,7 +47,10 @@ def play_online(bot, server: str, match: int, player: int, token: int, max_secon
                 kind = data[0]
                 if kind == 10:
                     delay = data[6]
-                elif kind == 11 and not started and delay is not None:
+                elif kind == 11 and not started:
+                    delay = data[1] if len(data) > 1 else delay  # START may overtake WELCOME
+                    if delay is None:
+                        continue
                     started = True
                     session = LIB.arena_session_new(game, player, delay, 12)
                     t0 = time.perf_counter()

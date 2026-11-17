@@ -30,7 +30,7 @@ export function input(match: number, player: number, haveRemote: number, first: 
 
 export type ServerMsg =
   | { kind: "welcome"; match: number; player: number; delay: number }
-  | { kind: "start" }
+  | { kind: "start"; delay: number }
   | { kind: "inputs"; haveYours: number; first: number; inputs: number[] }
   | { kind: "result"; winner: number; desyncs: number }
   | { kind: "error"; message: string };
@@ -42,7 +42,7 @@ export function parse(buf: ArrayBuffer): ServerMsg | null {
     case 10:
       return b.byteLength >= 7 ? { kind: "welcome", match: b.getUint32(1, true), player: b.getUint8(5), delay: b.getUint8(6) } : null;
     case 11:
-      return { kind: "start" };
+      return { kind: "start", delay: b.byteLength >= 2 ? b.getUint8(1) : -1 }; // START may overtake WELCOME
     case 12: {
       if (b.byteLength < 10) return null;
       const n = b.getUint8(9);

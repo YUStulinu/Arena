@@ -170,7 +170,8 @@ int main(int argc, char** argv) {
                 case 10:  // WELCOME
                     if (n >= 7) delay = buf[6];
                     break;
-                case 11:  // START
+                case 11:  // START (carries the delay: it may arrive before WELCOME)
+                    if (n >= 2) delay = buf[1];
                     if (!started && delay >= 0) {
                         started = true;
                         session = std::make_unique<Session>(game, player, delay);

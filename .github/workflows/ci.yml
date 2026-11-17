@@ -1,0 +1,90 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  engine:
+    name: Engine (C++, Lua) - determinism and rollback
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and test
+        run: |
+          cmake -S engine -B engine/build/native -DCMAKE_BUILD_TYPE=Release
+          cmake --build engine/build/native -j 4
+          ctest --test-dir engine/build/native --output-on-failure
+
+  wasm:
+    name: Engine in Wasm and the browser client (TypeScript)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: wasi-sdk
+        run: |
+          curl -fsSL https://github.com/WebAssembly/wasi-sdk/releases/download/wasi-sdk-34/wasi-sdk-34.0-x86_64-linux.tar.gz | tar xz -C $RUNNER_TEMP
+          echo "WASI_SDK=$RUNNER_TEMP/wasi-sdk-34.0-x86_64-linux" >> $GITHUB_ENV
+      - name: Build the engine for Wasm (must reproduce the golden replay)
+        run: engine/build_wasm.sh
+      - name: Tests
+        run: cd web && npm ci && npm test
+
+  server:
+    name: Match server (Rust)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Tests
+        run: cd server && cargo test --release
+
+  matchmaker:
+    name: Matchmaker and Glicko-2 (Elixir)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: "27"
+          elixir-version: "1.18"
+      - name: Tests
+        run: cd matchmaker && mix test
+
+  bots:
+    name: Bots (Python)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install numpy pytest
+      - name: Build the engine library
+        run: cmake -S engine -B engine/build/native -DCMAKE_BUILD_TYPE=Release && cmake --build engine/build/native -j 4 --target arena_shared
+      - name: Tests
+        run: python -m pytest -q bots/tests
+
+  end-to-end:
+    name: A full match through the server (no desyncs)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Build
+        run: |
+          cmake -S engine -B engine/build/native -DCMAKE_BUILD_TYPE=Release && cmake --build engine/build/native -j 4 --target arena_client
+          cd server && cargo build --release
+      - name: Chase against random, through the server
+        run: |
+          python3 eval/local_match.py --bots chase random > match.json
+          cat match.json
+          python3 -c "
+          import json; r = json.load(open('match.json'))
+          assert r['server']['desyncs'] == 0 and r['server']['checksums'] > 0, r['server']
+          assert r['server']['winner'] in (0, 1) and not r['server']['forfeit'], r['server']
+          "

@@ -10,7 +10,7 @@
 //!           confirmed frames
 //! server -> client
 //!   WELCOME 10, match u32, player u8, delay u8
-//!   START   11
+//!   START   11, delay u8  (the delay again: START may overtake WELCOME)
 //!   INPUTS  12, have_yours u32, first u32, n u8, n inputs (the opponent's)
 //!   RESULT  13, winner i8 (-1 draw/forfeit), desyncs u32
 //!   ERROR   14, utf-8 message
